@@ -1,0 +1,14 @@
+
+from django.urls import path , include
+from  . import views
+from rest_framework import routers
+
+router = routers.DefaultRouter()
+router.register('MyAPI' , views.ApprovalsView)
+
+urlpatterns = [
+    path('', views.call_model.cxcontact, name='cxform'),
+    path('api/', include(router.urls)),
+
+
+]
