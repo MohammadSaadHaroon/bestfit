@@ -4,12 +4,9 @@ from django.db import models
 
 
 class approvals(models.Model):
-   # Question = models.IntegerField()
-    #Clearmarks = models.IntegerField()
     Obtainmarks = models.FloatField()
     Time = models.FloatField()
-
-
+    grade = models.CharField(max_length=100)
 
     def __str__(self):
-        return '{}, {}'.format(self.Question, self.Clearmarks)
+        return f"User Grade {self.grade} User Score {self.Obtainmarks} User total time {self.Time}"
